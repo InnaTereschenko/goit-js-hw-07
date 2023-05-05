@@ -49,18 +49,17 @@ function openModal(event) {
     <img src=${showOriginal} width="800" height="600">
 `,
         {
-            onShowModal: (instance) => {
+            onShow: (instance) => {
                 window.addEventListener('keydown', onEscKeyPress);
             },
             
-            onCloseModal: (instance) => {
+            onClose: (instance) => {
                 window.removeEventListener('keydown', onEscKeyPress);
             },
         });
     
      instance.show();
     
-    list.addEventListener('keydown', onEscKeyPress);
     
     function onEscKeyPress(event) {
         
